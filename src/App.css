@@ -1,11 +1,141 @@
-table{
-    text-align: left;
+/* PALETA
+   Azul principal: #0a6fff
+   Azul claro: #e6f1ff
+   Cinza claro: #f4f7fa
+   Cinza texto: #4a4a4a
+   Verde sucesso: #4CAF50
+*/
+
+:root {
+  font-family: "Inter", system-ui, Avenir, Helvetica, Arial, sans-serif;
+  color: #1d2d50;
+  background-color: #f4f7fa;
 }
 
-th{
-    padding-right: 20px;
+
+
+body {
+  margin: 0;
+  display: flex;
+  place-items: start;
+  justify-content: center;
+  padding: 40px 20px;
 }
 
-td{
-    padding-right: 20px;
+h1 {
+  font-size: 2.4rem;
+  text-align: center;
+  color: #0a6fff;
+  margin-bottom: 40px;
+  font-weight: 700;
+}
+
+
+
+section {
+  background: white;
+  padding: 20px;
+  margin-bottom: 35px;
+  border-radius: 12px;
+  width: 850px;
+  box-shadow: 0 4px 15px rgba(0,0,0,0.05);
+  border: 1px solid #e2e8f0;
+}
+
+section h2 {
+  margin-top: 0;
+  color: #0a6fff;
+  font-size: 1.5rem;
+  border-bottom: 2px solid #e6f1ff;
+  padding-bottom: 8px;
+}
+
+
+
+input, select {
+  width: 100%;
+  padding: 10px 12px;
+  margin: 6px 0 16px;
+  border-radius: 6px;
+  border: 1px solid #c9d6e2;
+  background-color: white;
+  font-size: 1rem;
+}
+
+input:focus,
+select:focus {
+  border-color: #0a6fff;
+  outline: none;
+  box-shadow: 0 0 4px rgba(10,111,255,0.3);
+}
+
+
+
+button {
+  background-color: #0a6fff;
+  color: white;
+  border: none;
+  padding: 10px 18px;
+  font-size: 0.95rem;
+  border-radius: 8px;
+  cursor: pointer;
+  font-weight: 500;
+  transition: 0.2s;
+}
+
+button:hover {
+  background-color: #005be2;
+}
+
+button:active {
+  transform: scale(0.98);
+}
+
+
+
+table {
+  width: 100%;
+  border-collapse: collapse;
+  margin-top: 15px;
+  background-color: white;
+}
+
+th {
+  background-color: #e6f1ff;
+  padding: 12px;
+  text-align: left;
+  color: #0a6fff;
+  font-weight: 600;
+  border-bottom: 2px solid #c7ddff;
+}
+
+td {
+  padding: 10px 12px;
+  border-bottom: 1px solid #e5e5e5;
+  color: #4a4a4a;
+}
+
+tr:hover {
+  background-color: #f1f7ff;
+}
+
+
+
+.table-container {
+  overflow-x: auto;
+  border-radius: 10px;
+  border: 1px solid #d9e3ef;
+  background: white;
+}
+
+
+
+@media (max-width: 700px) {
+  section {
+    width: 100%;
+  }
+
+  table {
+    font-size: 0.9rem;
+  }
 }
