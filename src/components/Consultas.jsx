@@ -21,7 +21,7 @@ function formatDateToInput(dateString) {
   return dateString;
 }
 
-function Consultas({ data, setData, pacientes, medicos }) {
+function Consultas({ data, setData, pacientes, medicos, fetch }) {
 
   const [form, setForm] = useState({
     id_paciente: "",
@@ -134,7 +134,7 @@ function Consultas({ data, setData, pacientes, medicos }) {
 
   useEffect(() => {
     fetchData();
-  }, []);
+  }, [fetch]);
 
   return (
     <>

@@ -20,7 +20,7 @@ function formatDateToInput(dateString) {
   return dateString;
 }
 
-function Pacientes({ data, setData }) {
+function Pacientes({ data, setData, fetch,setFetchData }) {
 
   const [form, setForm] = useState({
     nome: "",
@@ -98,6 +98,7 @@ function Pacientes({ data, setData }) {
       });
 
       fetchData();
+      setFetchData(fetch + 1);
 
     } catch (erro) {
       console.error("Erro ao deletar:", erro);

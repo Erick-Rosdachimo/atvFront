@@ -1,7 +1,7 @@
 import { useEffect, useState } from 'react'
 import axios from 'axios';
 
-function Departamentos({ data, setData }) {
+function Departamentos({ data, setData, fetch, setFetchData }) {
   const [form, setForm] = useState({
     nome: "",
     localizacao: ""
@@ -69,6 +69,7 @@ function Departamentos({ data, setData }) {
       });
 
       fetchData();
+      setFetchData(fetch + 1)
     } catch (erro) {
       if (erro.response?.status === 404) {
         alert("Erro 404: Departamento não encontrado.");

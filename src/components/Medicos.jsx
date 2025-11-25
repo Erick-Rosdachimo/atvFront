@@ -20,7 +20,7 @@ function formatDateToInput(dateString) {
   return dateString;
 }
 
-function Medicos({ data, setData, departamentos }) {
+function Medicos({ data, setData, departamentos, fetch, setFetchData }) {
   const [form, setForm] = useState({
     nome: "",
     crm: "",
@@ -107,6 +107,7 @@ function Medicos({ data, setData, departamentos }) {
         data: { id_medico: id }
       });
       fetchData();
+      setFetchData(fetch + 1)
     } catch (erro) {
       if (erro.response?.status === 404) {
         alert("Erro 404: Médico não encontrado.");
@@ -119,7 +120,7 @@ function Medicos({ data, setData, departamentos }) {
 
   useEffect(() => {
     fetchData();
-  }, []);
+  }, [fetch]);
 
   return (
     <>
